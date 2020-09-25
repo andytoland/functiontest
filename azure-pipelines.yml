@@ -87,9 +87,9 @@ stages:
   dependsOn: Deploy
   jobs:
     - job: Test
+      pool: server
       displayName: Test
-      pool:
-       vmImage: $(vmImageName)
+      
       steps:
       - task: InvokeRESTAPI@1
         inputs:
