@@ -87,8 +87,8 @@ stages:
   dependsOn: Deploy
   condition: succeeded()
   jobs:
-    - job: Build
-      displayName: Build
+    - job: Test
+      displayName: Test
       pool:
        vmImage: $(vmImageName)
       steps:
