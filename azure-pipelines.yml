@@ -93,8 +93,8 @@ stages:
       steps:
       - task: InvokeRESTAPI@1
         inputs:
-          connectionType: connectedServiceNameARM
-          serviceConnection: Generic
+          connectionType: connectedServiceName
+          serviceConnection: '$(ServiceConnection)'
           method: GET
           #headers: '{Content-Type:application/json, PlanUrl: $(system.CollectionUri), ProjectId: $(system.TeamProjectId), HubName: $(system.HostType), PlanId: $(system.PlanId), JobId: $(system.JobId), TimelineId: $(system.TimelineId), TaskInstanceId: $(system.TaskInstanceId), AuthToken: $(system.AccessToken)}' 
           #body: # Required when method != GET && Method != HEAD
